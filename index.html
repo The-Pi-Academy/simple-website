@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pi Camp Website</title>
+  <link rel="icon" type="image/x-icon" href="assets/raspberry-pi-favicon.png" />
+  <style>
+    body {
+      background-color: #f6f2f7;
+      font-family: sans-serif;
+    }
+
+    input {
+      cursor: pointer;
+    }
+
+    #header {
+      top: 0;
+      left: 0;
+      padding: 24px;
+      position: fixed;
+      background-color: #26334f;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+    }
+
+    #header a {
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px;
+    }
+
+    #camper-survey-submit-button:hover, #header a:hover, .content .content-block p a:hover {
+      color: #5cedbf;
+    }
+
+    .content {
+      margin: 96px 0 112px;
+    }
+
+    .content .content-block {
+      align-items: center;
+      display: flex;
+    }
+
+    .content .content-block:not(:last-child) {
+      border-bottom: 1px solid #26334f;
+    }
+
+    .content-text-block {
+      background-color: rgba(55, 73, 113, 0.3);
+      border-radius: 16px;
+      font-size: 18px;
+      line-height: 2;
+      padding: 0 32px;
+      margin: 16px;
+    }
+
+    .content-text-block a {
+      color: #26334f;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    #camper-survey {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(55, 73, 113, 0.5);
+      border-radius: 16px;
+      color: white;
+      padding: 16px;
+      margin: 16px;
+      width: 100%;
+    }
+
+    #camper-survey .title {
+      font-size: 26px;
+      font-weight: bolder;
+      text-decoration: underline;
+      margin: 8px;
+      line-height: 2;
+    }
+
+    #camper-survey div {
+      margin: 16px 0;
+    }
+
+    #camper-survey .color-container {
+      width: 100%;
+    }
+
+    #camper-survey .multi-fields {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #camper-survey .multi-fields fieldset {
+      width: 200px;
+    }
+
+    #camper-survey-submit-button {
+      cursor: pointer;
+      border: none;
+      box-shadow: 4px 2px 2px #5cedbf;
+      border-radius: 16px;
+      font-weight: bold;
+      padding: 16px;
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+<div id="header">
+  <a href="https://github.com/BravoLT/pi-camp-simple-website" target="_blank">
+    Pi Camp Static Website
+  </a>
+</div>
+<div class="content">
+  <div class="content-block">
+    <div>
+      <p class="content-text-block">
+        <a href="https://loremipsum.io/" target="_blank">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Morbi hendrerit eros quis posuere interdum. Suspendisse potenti. Curabitur tincidunt, neque et tempus
+        tincidunt, ex sem posuere lectus, ac fermentum velit purus sit amet turpis. Maecenas suscipit laoreet lacus, nec tristique enim efficitur nec. In pulvinar erat eu ligula scelerisque dictum vitae eu metus. Fusce
+        luctus neque vel sapien pellentesque sagittis. Phasellus eget justo nec nisi consectetur dapibus id et ipsum. Suspendisse potenti. Duis pretium lorem vitae nibh sodales, et hendrerit tellus condimentum. In interdum
+        blandit fermentum. Phasellus ante dolor, rutrum sed nibh nec, facilisis semper dolor. Curabitur efficitur porta metus viverra dictum. Phasellus euismod odio eget sapien porttitor, et congue arcu blandit. Cras id orci
+        id eros rutrum consectetur. Suspendisse et lacinia augue. Curabitur lobortis efficitur ornare.
+      </p>
+      <p class="content-text-block">
+        Pellentesque dignissim velit non eros condimentum imperdiet. Phasellus lacus metus, imperdiet in ipsum vitae, tempus finibus justo. Cras purus massa, sodales quis erat non, pellentesque eleifend sapien. Aliquam
+        suscipit viverra blandit. Duis quis lorem pharetra, pulvinar arcu vitae, pulvinar nulla. Cras finibus dui enim, vitae vulputate dolor eleifend quis. Curabitur non elit eu lacus egestas scelerisque. Fusce dolor dui,
+        dignissim sit amet massa quis, laoreet efficitur elit. Duis vestibulum libero eget dignissim sagittis. Nunc luctus felis orci, non rutrum augue volutpat a. Donec pretium a urna at semper. Praesent ullamcorper, neque
+        ut finibus volutpat, est dui feugiat arcu, eget placerat urna risus vitae purus. Praesent facilisis et enim in lobortis.
+      </p>
+    </div>
+    <form id="camper-survey">
+      <span class="title">Camper Survey</span>
+      <div class="color-container">
+        <label for="fav-color">Favorite Color</label>
+        <input id="fav-color" name="fav-color" type="color" value="#26334f" />
+      </div>
+      <div class="multi-fields">
+        <fieldset>
+          <legend>Favorite Super Hero</legend>
+          <div>
+            <input id="fav-supe1" name="fav-supe" type="radio" value="superman" />
+            <label for="fav-supe1">Superman</label>
+          </div>
+          <div>
+            <input id="fav-supe2" name="fav-supe" type="radio" value="batman" />
+            <label for="fav-supe2">Batman</label>
+          </div>
+          <div>
+            <input id="fav-supe3" name="fav-supe" type="radio" value="spidey" />
+            <label for="fav-supe3">Spider-Man</label>
+          </div>
+          <div>
+            <input id="fav-supe4" name="fav-supe" type="radio" value="dazzler" />
+            <label for="fav-supe4">Dazzler</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Favorite Sport(s)</legend>
+          <div>
+            <input id="fav-sport1" name="fav-sport" type="checkbox" value="basketball" />
+            <label for="fav-sport1">Basketball</label>
+          </div>
+          <div>
+            <input id="fav-sport2" name="fav-sport" type="checkbox" value="soccer" />
+            <label for="fav-sport2">Soccer</label>
+          </div>
+          <div>
+            <input id="fav-sport3" name="fav-sport" type="checkbox" value="football" />
+            <label for="fav-sport3">Football</label>
+          </div>
+          <div>
+            <input id="fav-sport4" name="fav-sport" type="checkbox" value="golf" />
+            <label for="fav-sport4">Golf</label>
+          </div>
+          <div>
+            <input id="fav-sport5" name="fav-sport" type="checkbox" value="baseball" />
+            <label for="fav-sport5">Baseball</label>
+          </div>
+        </fieldset>
+      </div>
+      <button id="camper-survey-submit-button">Promise?</button>
+    </form>
+  </div>
+</div>
+</body>
+<script type="application/javascript">
+
+  function ready(callback) {
+    document.addEventListener('DOMContentLoaded', callback);
+  }
+
+  function updateBackgroundColor(color) {
+    const headerElement = document.getElementById('header');
+    headerElement.style.backgroundColor = color;
+
+    const camperSurveyForm = document.getElementById('camper-survey');
+    camperSurveyForm.style.color = color;
+
+    const contentTextBlocks = document.getElementsByClassName('content-text-block');
+    for (const block of contentTextBlocks){
+      block.style.backgroundColor = color;
+    }
+  }
+
+  ready(function () {
+    const camperSurveyForm = document.getElementById('camper-survey');
+    if (camperSurveyForm) {
+      camperSurveyForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        console.log('camper-survey Form Submitted');
+
+        const data = new FormData(camperSurveyForm);
+
+        // create pop-up message
+        let output = "Thank you for taking our survey!\n\n";
+        let sports = [];
+        for (const [key, val] of data) {
+
+          let label;
+          switch (key) {
+            case 'fav-color':
+              label = 'Favorite Color';
+              updateBackgroundColor(val);
+              break;
+            case 'fav-supe':
+              label = 'Favorite Super Hero';
+              break;
+            case 'fav-sport':
+              sports.push(val);
+              continue;
+            default:
+              label = key;
+          }
+          output += `    ${label} = ${val}\n`
+        }
+        if (sports.length > 0) {
+          output += `    Favorite Sport(s) = ${sports}\n`
+        }
+
+        output += "\nThose are my favorite too!"
+        alert(output);
+      });
+    }
+  });
+</script>
+</html>
